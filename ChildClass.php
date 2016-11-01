@@ -36,7 +36,7 @@
       return parent::getWins();
     }
 
-    public function setMaritalStatus($newWins) {
+    public function setWins($newWins) {
       echo "<!-- Setting new Wins to " . $newWins . "-->";
       $this->wins = $newWins;
     }
@@ -45,7 +45,7 @@
 			return parent::getLosses();
 		}
 
-		public function setMaritalStatus($newLosses) {
+		public function setLosses($newLosses) {
 			echo "<!-- Setting new Losses to " . $newLosses . "-->";
 			$this->losses = $newLosses;
 		}
