@@ -3,6 +3,8 @@
 
 	$teamOne = new ChildClass("Philadelphia", "Eagles", 7, 9);
 
+	$teamTwo = clone $teamOne;
+
 ?>
 
 <!doctype html>
