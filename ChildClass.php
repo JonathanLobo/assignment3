@@ -13,7 +13,6 @@
       $this->mascot = $mascot;
       $this->wins = $wins;
 			$this->losses = $losses;
-			//parent::__construct($city, $mascot, $wins, $losses);
     }
 
     public function getOldCity() {
