@@ -1,6 +1,6 @@
 <?php
 	// this file will extend ParentClass.php
-	include 'ParentClass.php';
+	require_once 'ParentClass.php';
 
 	class ChildClass extends ParentClass {
 		private $city;
@@ -8,11 +8,11 @@
     private $wins;
 		private $losses;
 
-    public function __construct($c, $m, $w, $l) {
-      $this->city = $c;
-      $this->mascot = $m;
-      $this->wins = $w;
-			$this->losses = $l;
+    public function __construct($city, $mascot, $wins, $losses) {
+      $this->city = $city;
+      $this->mascot = $mascot;
+      $this->wins = $wins;
+			$this->losses = $losses;
     }
 
     public function getOldCity() {
@@ -58,3 +58,4 @@
 		}
 
 	}
+?>

@@ -7,11 +7,11 @@
     private $wins;
 		private $losses;
 
-    public function __construct($c, $m, $w, $l) {
-      $this->city = $c;
-      $this->mascot = $m;
-      $this->wins = $w;
-			$this->losses = $l;
+		public function __construct($city, $mascot, $wins, $losses) {
+      $this->city = $city;
+      $this->mascot = $mascot;
+      $this->wins = $wins;
+			$this->losses = $losses;
     }
 
     public function getCity() {
@@ -32,27 +32,28 @@
 
     public function __toString() {
 			$totalGames = $this->wins + $this->losses;
-			$teamName = $this.getCity() . " " . $this.getMascot();
-			$record = $this.getWins() . " - " . $this.getLosses();
+			$teamName = $this->getCity() . " " . $this->getMascot();
+			$record = $this->getWins() . " - " . $this->getLosses();
 
 			$status;
 
 			if ($totalGames < 16) {
-				if ($this->$wins/($this->$wins + $this->$losses) >= .625) {
+				if ($this->getWins()/($this->getWins() + $this->getLosses()) >= .625) {
 					$status = "The season is looking promising!";
 				} else {
 					$status = "The team's chances are not looking good.";
 				}
 			} else {
-				if ($this->$wins/($this->$wins + $this->$losses) >= .625) {
+				if ($this->getWins()/($this->getWins() + $this->getLosses()) >= .625) {
 					$status = "They are playoff bound!";
 				} else {
 					$status = "They missed the playoffs. Oh well, there's always next year.";
 				}
 			}
 
-			$teamInfo = "After " . $totalGames . ", the " . $teamName . " have a record of " . $record . ".";
+			$teamInfo = "After " . $totalGames . " games, the " . $teamName . " have a record of " . $record . ".";
 
       return $teamInfo . "<br>" . $status;
     }
 	}
+?>

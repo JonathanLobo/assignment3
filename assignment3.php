@@ -1,5 +1,5 @@
 <?php
-	include 'ChildClass.php';
+	require_once 'ChildClass.php';
 
 	$teamOne = new ChildClass("Philadelphia", "Eagles", 7, 9);
 
@@ -29,7 +29,7 @@
 			<?= $teamOne->setLosses(2); ?>
 			<?= $teamOne; ?>
 
-			<p>However, the winning stopped there.</p>;
+			<p>However, the winning stopped there.</p>
 			<?= $teamOne->setLosses(12); ?>
 			<?= $teamOne; ?>
 
