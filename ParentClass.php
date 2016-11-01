@@ -1,17 +1,17 @@
 <?php
-	// This is the file for the parent class
+  // This is the file for the parent class
 
-	class ParentClass {
-		private $c;
+  class ParentClass {
+    private $c;
     private $m;
     private $w;
-		private $l;
+    private $l;
 
-		public function __construct($c, $m, $w, $l) {
+    public function __construct($c, $m, $w, $l) {
       $this->city = $c;
       $this->mascot = $m;
       $this->wins = $w;
-			$this->losses = $l;
+      $this->losses = $l;
     }
 
     public function getCity() {
@@ -26,34 +26,34 @@
       return $this->wins;
     }
 
-		public function getLosses() {
+    public function getLosses() {
       return $this->losses;
     }
 
     public function __toString() {
-			$totalGames = $this->getWins() + $this->getLosses();
-			$teamName = $this->getCity() . " " . $this->getMascot();
-			$record = $this->getWins() . " - " . $this->getLosses();
+      $totalGames = $this->getWins() + $this->getLosses();
+      $teamName = $this->getCity() . " " . $this->getMascot();
+      $record = $this->getWins() . " - " . $this->getLosses();
 
-			$status;
+      $status;
 
-			if ($totalGames < 16) {
-				if ($this->getWins()/($this->getWins() + $this->getLosses()) >= .625) {
-					$status = "The season is looking promising!";
-				} else {
-					$status = "The team's chances are not looking good.";
-				}
-			} else {
-				if ($this->getWins()/($this->getWins() + $this->getLosses()) >= .625) {
-					$status = "They are playoff bound!";
-				} else {
-					$status = "They missed the playoffs. Oh well, there's always next year.";
-				}
-			}
+      if ($totalGames < 16) {
+        if ($this->getWins()/($this->getWins() + $this->getLosses()) >= .625) {
+          $status = "The season is looking promising!";
+        } else {
+          $status = "The team's chances are not looking good.";
+        }
+      } else {
+        if ($this->getWins()/($this->getWins() + $this->getLosses()) >= .625) {
+          $status = "They are playoff bound!";
+        } else {
+          $status = "They missed the playoffs. Oh well, there's always next year.";
+        }
+      }
 
-			$teamInfo = "After " . $totalGames . " games, the " . $teamName . " have a record of " . $record . ".";
+      $teamInfo = "After " . $totalGames . " games, the " . $teamName . " have a record of " . $record . ".";
 
       return $teamInfo . "<br>" . $status;
     }
-	}
+  }
 ?>

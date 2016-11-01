@@ -1,18 +1,18 @@
 <?php
-	// this file will extend ParentClass.php
-	require_once 'ParentClass.php';
+  // this file will extend ParentClass.php
+  require_once 'ParentClass.php';
 
-	class ChildClass extends ParentClass {
-		public $city;
+  class ChildClass extends ParentClass {
+    public $city;
     public $mascot;
     public $wins;
-		public $losses;
+    public $losses;
 
     public function __construct($city, $mascot, $wins, $losses) {
       $this->city = $city;
       $this->mascot = $mascot;
       $this->wins = $wins;
-			$this->losses = $losses;
+      $this->losses = $losses;
     }
 
     public function getOldCity() {
@@ -42,20 +42,20 @@
       $this->wins = $newWins;
     }
 
-		public function getOldLosses() {
-			return parent::getLosses();
-		}
+    public function getOldLosses() {
+      return parent::getLosses();
+    }
 
-		public function resetRecord() {
-			echo "<!-- Resetting the team's record. -->";
-			$this->wins = 0;
-			$this->losses = 0;
-		}
+    public function resetRecord() {
+      echo "<!-- Resetting the team's record. -->";
+      $this->wins = 0;
+      $this->losses = 0;
+    }
 
-		public function setLosses($newLosses) {
-			echo "<!-- Setting new Losses to " . $newLosses . "-->";
-			$this->losses = $newLosses;
-		}
+    public function setLosses($newLosses) {
+      echo "<!-- Setting new Losses to " . $newLosses . "-->";
+      $this->losses = $newLosses;
+    }
 
-	}
+  }
 ?>
