@@ -18,13 +18,13 @@
 		<h1>NFL News Report</h1>
 
 	  <section>
-	    <p>The Philadelphia Eagles had a rough season in 2016.</p>
+	    <h3>The Philadelphia Eagles had a rough season in 2015.</h3>
 	    <?= $teamOne; ?>
 
 	    <p>Not satisfied with the results, the team fired their coach and had high expectations for the next season.</p>
 	    <?= $teamOne->resetRecord(); ?>
 
-			<p>The 2016 season started well!</p>
+			<h3>The 2016 season started well!</h3>
 			<?= $teamOne->setWins(4); ?>
 			<?= $teamOne->setLosses(2); ?>
 			<?= $teamOne; ?>
@@ -38,17 +38,17 @@
 			<?= $teamOne->setCity("Delaware"); ?>
 			<?= $teamOne->setMascot("Ladybugs"); ?>
 
-	    <p>The season began well again...</p>
-	    <?= $teamOne; ?>
-			<?= $teamOne->setWins(5); ?>
+	    <h3>The 2017 season began well again...</h3>
+			<?= $teamOne->setWins(7); ?>
 			<?= $teamOne->setLosses(1); ?>
+			<?= $teamOne; ?>
 
 	    <p>This time, motivated by the suddenly large fanbase, the team finished the season strong.</p>
 	    <?= $teamOne->setWins(13); ?>
 			<?= $teamOne->setLosses(3); ?>
 			<?= $teamOne; ?>
 
-	    <p>They went on to win the Super Bowl!</p>
+	    <h3>They went on to win the Super Bowl!</h3>
 
 		</section>
 	</body>

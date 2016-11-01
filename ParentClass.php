@@ -2,16 +2,16 @@
 	// This is the file for the parent class
 
 	class ParentClass {
-		private $city;
-    private $mascot;
-    private $wins;
-		private $losses;
+		private $c;
+    private $m;
+    private $w;
+		private $l;
 
-		public function __construct($city, $mascot, $wins, $losses) {
-      $this->city = $city;
-      $this->mascot = $mascot;
-      $this->wins = $wins;
-			$this->losses = $losses;
+		public function __construct($c, $m, $w, $l) {
+      $this->city = $c;
+      $this->mascot = $m;
+      $this->wins = $w;
+			$this->losses = $l;
     }
 
     public function getCity() {
@@ -31,7 +31,7 @@
     }
 
     public function __toString() {
-			$totalGames = $this->wins + $this->losses;
+			$totalGames = $this->getWins() + $this->getLosses();
 			$teamName = $this->getCity() . " " . $this->getMascot();
 			$record = $this->getWins() . " - " . $this->getLosses();
 

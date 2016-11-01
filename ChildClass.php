@@ -3,16 +3,17 @@
 	require_once 'ParentClass.php';
 
 	class ChildClass extends ParentClass {
-		private $city;
-    private $mascot;
-    private $wins;
-		private $losses;
+		public $city;
+    public $mascot;
+    public $wins;
+		public $losses;
 
     public function __construct($city, $mascot, $wins, $losses) {
       $this->city = $city;
       $this->mascot = $mascot;
       $this->wins = $wins;
 			$this->losses = $losses;
+			//parent::__construct($city, $mascot, $wins, $losses);
     }
 
     public function getOldCity() {
@@ -25,7 +26,7 @@
     }
 
     public function getOldMascot() {
-      return parent::getJob();
+      return parent::getMascot();
     }
 
     public function setMascot($newMascot) {
