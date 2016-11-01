@@ -28,6 +28,8 @@
 		    <?= $teamOne->resetRecord(); ?>
 			</div>
 
+			<br>
+
 			<div>
 				<h3>The 2016 season started well!</h3>
 				<?= $teamOne->setWins(4); ?>
@@ -44,6 +46,8 @@
 				<?= $teamOne->setMascot("Ladybugs"); ?>
 			</div>
 
+			<br>
+
 			<div>
 		    <h3>The 2017 season began well again...</h3>
 				<?= $teamOne->setWins(7); ?>
@@ -56,6 +60,13 @@
 				<p><?= $teamOne; ?></p>
 
 				<h3>They went on to win the Super Bowl!</h3>
+			</div>
+
+			<br>
+
+			<div>
+				<h3>It's hard to believe that only 2 years ago...</h3>
+				<p><?= $teamTwo; ?></p>
 			</div>
 
 		</section>
