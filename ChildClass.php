@@ -1,5 +1,6 @@
 <?php
 	// this file will extend ParentClass.php
+	include 'ParentClass.php';
 
 	class ChildClass extends ParentClass {
 		private $city;
@@ -43,6 +44,12 @@
 
 		public function getOldLosses() {
 			return parent::getLosses();
+		}
+
+		public function resetRecord() {
+			echo "<!-- Resetting the team's record. -->";
+			$this->wins = 0;
+			$this->losses = 0;
 		}
 
 		public function setLosses($newLosses) {

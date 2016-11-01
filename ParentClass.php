@@ -31,27 +31,27 @@
     }
 
     public function __toString() {
-			$totalGames = $wins + $losses;
+			$totalGames = $this->wins + $this->losses;
 			$teamName = $this.getCity() . " " . $this.getMascot();
 			$record = $this.getWins() . " - " . $this.getLosses();
 
 			$status;
 
 			if ($totalGames < 16) {
-				if ($wins/($wins + $losses) >= .625) {
+				if ($this->$wins/($this->$wins + $this->$losses) >= .625) {
 					$status = "The season is looking promising!";
 				} else {
 					$status = "The team's chances are not looking good.";
 				}
 			} else {
-				if ($wins/($wins + $losses) >= .625) {
+				if ($this->$wins/($this->$wins + $this->$losses) >= .625) {
 					$status = "They are playoff bound!";
 				} else {
-					$status = "Oh well, there's always next year.";
+					$status = "They missed the playoffs. Oh well, there's always next year.";
 				}
 			}
 
-			$teamInfo = "After " . $totalGames . ", the " . $teamName . "have a record of" $record . ".";
+			$teamInfo = "After " . $totalGames . ", the " . $teamName . " have a record of " . $record . ".";
 
       return $teamInfo . "<br>" . $status;
     }
